@@ -11,9 +11,9 @@
 #import "CAXException.h"
 #import "ListenerViewController.h"
 
-#define OWEN_PITCH 1
+#define OWEN_PITCH 1 // TWO ALGORITHMs SWITCH
 
-#define NOISE_GAIN 20
+#define NOISE_GAIN_THRESHOLD 20
 const float MIN_FREQ = 20.0f;
 const float MAX_FREQ = 5000.0f;
 
@@ -156,7 +156,7 @@ OSStatus RenderFFTCallback (void					*inRefCon,
 		// a split real vector.
 		vDSP_ztoc(&A, 1, (COMPLEX *)outputBuffer, 2, nOver2);
 		
-#ifdef OWENPITCH
+#ifdef OWEN_PITCH
         // Apply Cutoff
         int bin = 0;
         float max = outputBuffer[0];
@@ -186,8 +186,9 @@ OSStatus RenderFFTCallback (void					*inRefCon,
         }
         
         // Check Again: Noise Amplitude
-        if (max < NOISE_GAIN) bin = 0;
-        
+        if (max < NOISE_GAIN_THRESHOLD) {
+            bin = 0;   
+        }
 #else
 		// Determine the dominant frequency by taking the magnitude squared and
 		// saving the bin which it resides in.
