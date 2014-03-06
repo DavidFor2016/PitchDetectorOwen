@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		133BC9C418C83BA2003B98A5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 133BC9C318C83BA2003B98A5 /* README.md */; };
 		137574AA17D5C8DA005075BE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 137574A917D5C8DA005075BE /* AudioToolbox.framework */; };
 		1D3623260D0F684500981E51 /* SafeSoundAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* SafeSoundAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		133BC9C318C83BA2003B98A5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		137574A917D5C8DA005075BE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* SafeSoundAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafeSoundAppDelegate.h; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				133BC9C318C83BA2003B98A5 /* README.md */,
 				A04F83C6127292C400B590A1 /* Singletons */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -222,6 +225,7 @@
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				A061FB08127643D3002625EB /* ListenerViewController.xib in Resources */,
+				133BC9C418C83BA2003B98A5 /* README.md in Resources */,
 				A061FB2312765E99002625EB /* Sound_Wave_Listen.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
