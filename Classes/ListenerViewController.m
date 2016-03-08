@@ -75,7 +75,8 @@
 - (void)frequencyChangedWithValue:(float)newFrequency{
 	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
 	self.currentFrequency = newFrequency;
-	[self performSelectorInBackground:@selector(updateFrequencyLabel) withObject:nil];
+//	[self performSelectorInBackground:@selector(updateFrequencyLabel) withObject:nil];
+    [self performSelectorOnMainThread:@selector(updateFrequencyLabel) withObject:nil waitUntilDone:YES];
 	[pool drain];
 	pool = nil;
 	
